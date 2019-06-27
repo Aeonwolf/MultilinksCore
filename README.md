@@ -29,13 +29,10 @@ Please take a few minutes to review the overview below before diving into the co
       + The "secrets.json" will opened
       + Enter Key/Value secrets into "secrets.json" or via the [command line](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-2.2&tabs=windows#set-a-secret)
          - "ConnectionStrings:ApiServiceDb": "[CONNECTION_STRING_TO_LOCAL_API_DB]",
-
          - "DefaultPagingOptions:limit": 10,
          - "DefaultPagingOptions:offset": 0,
-
          - "TokenServiceInfo:ApiName": "ApiService",
          - "TokenServiceInfo:AuthorityUrl": "https://localhost:44300",
-
          - "CorsOrigins:WebIdp": "https://localhost:44300",
          - "CorsOrigins:WebApi": "https://localhost:44301",
          - "CorsOrigins:WebConsole": "https://localhost:44302"
