@@ -10,5 +10,7 @@ namespace Multilinks.ApiService.Hubs.Interfaces
       Task LinkConfirmationReceived(string linkId, string associatedDeviceName, string associatedDeviceOwnerName, bool isActive);
 
       Task NotificationReceived(string id, NotificationEntity.Type notificationType, string message, bool hidden);
+
+      Task LinkActiveStateReceived(string linkId, bool isActive);
    }
 }

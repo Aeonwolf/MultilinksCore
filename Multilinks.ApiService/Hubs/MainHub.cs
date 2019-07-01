@@ -41,12 +41,24 @@ namespace Multilinks.ApiService.Hubs
             Context.Abort();
          }
 
+         var links = await _hubConnectionService.GetActiveLinksConnectingToThisEndpointAsync(Context.ConnectionId,
+            Context.ConnectionAborted);
+
+         if (links != null)
+         {
+            foreach (var link in links)
+            {
+               await Clients.Client(link.SourceEndpoint.HubConnection.ConnectionId)
+                  .LinkActiveStateReceived(link.LinkId.ToString(), true);
+            }
+         }
+
          await base.OnConnectedAsync();
       }
 
       public override async Task OnDisconnectedAsync(Exception exception)
       {
-
+         /* TODO: Should log if false. */
          var connectionReferenceDeleted = await _hubConnectionService.DisconnectHubConnectionReferenceAsync(
             Context.ConnectionId,
             CancellationToken.None);
