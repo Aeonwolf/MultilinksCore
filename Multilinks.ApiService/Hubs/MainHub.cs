@@ -25,7 +25,7 @@ namespace Multilinks.ApiService.Hubs
          var endpointId = Context.GetHttpContext().Request.Query["ep"];
          var ownerId = Context.User.Claims.FirstOrDefault(c => c.Type == "sub")?.Value;
 
-         if(string.IsNullOrEmpty(endpointId) || string.IsNullOrEmpty(ownerId))
+         if (string.IsNullOrEmpty(endpointId) || string.IsNullOrEmpty(ownerId))
          {
             Context.Abort();
          }
@@ -36,34 +36,51 @@ namespace Multilinks.ApiService.Hubs
             Context.ConnectionId,
             Context.ConnectionAborted);
 
-         if(!connectionReferenceCreated)
+         if (!connectionReferenceCreated)
          {
             Context.Abort();
          }
 
-         var links = await _hubConnectionService.GetActiveLinksConnectingToThisEndpointAsync(Context.ConnectionId,
-            Context.ConnectionAborted);
-
-         if (links != null)
-         {
-            foreach (var link in links)
-            {
-               await Clients.Client(link.SourceEndpoint.HubConnection.ConnectionId)
-                  .LinkActiveStateReceived(link.LinkId.ToString(), true);
-            }
-         }
+         await NotifySourceEnpointsOfLinkConnectedState();
 
          await base.OnConnectedAsync();
       }
 
       public override async Task OnDisconnectedAsync(Exception exception)
       {
+         await NotifySourceEnpointsOfLinkDisconnectedState();
+
          /* TODO: Should log if false. */
          var connectionReferenceDeleted = await _hubConnectionService.DisconnectHubConnectionReferenceAsync(
             Context.ConnectionId,
             CancellationToken.None);
 
          await base.OnDisconnectedAsync(exception);
+      }
+
+      private async Task NotifySourceEnpointsOfLinkConnectedState()
+      {
+         await NotifySourceEnpointsOfLinkConnectionState(true);
+      }
+
+      private async Task NotifySourceEnpointsOfLinkDisconnectedState()
+      {
+         await NotifySourceEnpointsOfLinkConnectionState(false);
+      }
+
+      private async Task NotifySourceEnpointsOfLinkConnectionState(bool state)
+      {
+         var links = await _hubConnectionService.GetActiveLinksConnectingToThisEndpointAsync(Context.ConnectionId,
+            CancellationToken.None);
+
+         if (links != null)
+         {
+            foreach (var link in links)
+            {
+               await Clients.Client(link.SourceEndpoint.HubConnection.ConnectionId)
+                  .LinkActiveStateReceived(link.LinkId.ToString(), state);
+            }
+         }
       }
    }
 }
