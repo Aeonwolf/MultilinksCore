@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Multilinks.ApiService.Entities;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,12 +11,10 @@ namespace Multilinks.ApiService.Services
    public class HubConnectionService : IHubConnectionService
    {
       private readonly ApiServiceDbContext _context;
-      private readonly IUserInfoService _userInfoService;
 
-      public HubConnectionService(ApiServiceDbContext context, IUserInfoService userInfoService)
+      public HubConnectionService(ApiServiceDbContext context)
       {
          _context = context;
-         _userInfoService = userInfoService;
       }
 
       public async Task<bool> ConnectHubConnectionReferenceAsync(Guid endpointId, Guid ownerId, string connectionId, CancellationToken ct)
@@ -25,14 +24,14 @@ namespace Multilinks.ApiService.Services
             .Include(r => r.HubConnection)
             .FirstOrDefaultAsync(ct);
 
-         if(endpoint == null)
+         if (endpoint == null)
             return false;
 
          endpoint.HubConnection.ConnectionId = connectionId;
          endpoint.HubConnection.Connected = true;
 
          var updated = await _context.SaveChangesAsync(ct);
-         if(updated < 1) return false;
+         if (updated < 1) return false;
 
          return true;
       }
@@ -41,16 +40,35 @@ namespace Multilinks.ApiService.Services
       {
          var hubConnection = await _context.HubConnections.FirstOrDefaultAsync(r => r.ConnectionId == connectionId, ct);
 
-         if(hubConnection != null)
+         if (hubConnection != null)
          {
             hubConnection.ConnectionId = "";
             hubConnection.Connected = false;
 
             var updated = await _context.SaveChangesAsync(ct);
-            if(updated < 1) return false;
+            if (updated < 1) return false;
          }
 
          return true;
+      }
+
+      public async Task<IEnumerable<EndpointLinkEntity>> GetActiveLinksConnectingToThisEndpointAsync(string connectionId,
+         CancellationToken ct)
+      {
+         if (String.IsNullOrEmpty(connectionId)) return null;
+
+         IQueryable<EndpointLinkEntity> query = _context.Links
+            .Where(r => r.AssociatedEndpoint.HubConnection.ConnectionId == connectionId
+               && r.Confirmed
+               && r.SourceEndpoint.HubConnection.Connected)
+            .Include(r => r.AssociatedEndpoint)
+            .Include(r => r.SourceEndpoint).ThenInclude(r => r.HubConnection);
+
+         var linksRequiredToBeNotified = await query.ToArrayAsync(ct);
+
+         if (linksRequiredToBeNotified.Length == 0) return null;
+
+         return linksRequiredToBeNotified;
       }
    }
 }
