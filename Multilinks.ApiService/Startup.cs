@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Multilinks.ApiService.Hubs;
 using Multilinks.ApiService.Infrastructure.Security;
+using System;
 
 namespace Multilinks.ApiService
 {
@@ -81,16 +82,16 @@ namespace Multilinks.ApiService
          services.Configure<PagingOptions>(_configuration.GetSection("DefaultPagingOptions"));
 
          services.AddAuthentication(options =>
-            {
-               options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-               options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-            .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
-            {
-               options.Authority = _configuration.GetValue<string>("TokenServiceInfo:AuthorityUrl");
-               options.ApiName = _configuration.GetValue<string>("TokenServiceInfo:ApiName");
-               options.TokenRetriever = CustomTokenRetriever.FromHeaderAndQueryString;
-            });
+         {
+            options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+         })
+         .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
+         {
+            options.Authority = _configuration.GetValue<string>("TokenServiceInfo:AuthorityUrl");
+            options.ApiName = _configuration.GetValue<string>("TokenServiceInfo:ApiName");
+            options.TokenRetriever = CustomTokenRetriever.FromHeaderAndQueryString;
+         });
 
          services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
          services.AddScoped<IUserInfoService, UserInfoService>();
@@ -99,7 +100,11 @@ namespace Multilinks.ApiService
          services.AddScoped<IEndpointLinkService, EndpointLinkService>();
          services.AddScoped<INotificationService, NotificationService>();
 
-         services.AddSignalR();
+         services.AddSignalR(hubOptions =>
+         {
+            hubOptions.ClientTimeoutInterval = TimeSpan.FromSeconds(20);
+            hubOptions.KeepAliveInterval = TimeSpan.FromSeconds(10);
+         });
 
          /* TODO: CORS policy will need to be updated before deployment. */
          services.AddCors(options =>
