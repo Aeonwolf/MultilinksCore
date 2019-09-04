@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Models;
 
-namespace Multilinks.ApiService.Filters
+namespace Multilinks.Core.Filters
 {
    public class JsonExceptionFilter : IExceptionFilter
    {

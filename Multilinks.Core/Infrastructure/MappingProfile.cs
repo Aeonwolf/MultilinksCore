@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using Multilinks.ApiService.Entities;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Entities;
+using Multilinks.Core.Models;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    public class MappingProfile : Profile
    {

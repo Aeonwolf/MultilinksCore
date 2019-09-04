@@ -1,10 +1,10 @@
-﻿using Multilinks.ApiService.Infrastructure;
+﻿using Multilinks.Core.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class SearchOptions<T, TEntity> : IValidatableObject
    {

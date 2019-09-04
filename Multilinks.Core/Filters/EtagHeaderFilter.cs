@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Multilinks.ApiService.Infrastructure;
+using Multilinks.Core.Infrastructure;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Multilinks.ApiService.Filters
+namespace Multilinks.Core.Filters
 {
    public class EtagHeaderFilter : IAsyncActionFilter
    {

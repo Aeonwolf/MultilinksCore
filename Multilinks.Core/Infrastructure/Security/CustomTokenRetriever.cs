@@ -6,7 +6,7 @@ using System;
 /**
 * Source: Daniel Leiszen @ https://github.com/IdentityServer/IdentityServer4/issues/2349
 **/
-namespace Multilinks.ApiService.Infrastructure.Security
+namespace Multilinks.Core.Infrastructure.Security
 {
    public class CustomTokenRetriever
    {

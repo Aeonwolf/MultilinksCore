@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Multilinks.ApiService.Infrastructure;
+using Multilinks.Core.Infrastructure;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class SortOptions<T, TEntity> : IValidatableObject
    {

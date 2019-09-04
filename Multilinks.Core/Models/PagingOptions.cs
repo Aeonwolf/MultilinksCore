@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class PagingOptions
    {

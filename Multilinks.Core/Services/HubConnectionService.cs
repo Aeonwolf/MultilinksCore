@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Multilinks.ApiService.Entities;
+using Multilinks.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public class HubConnectionService : IHubConnectionService
    {

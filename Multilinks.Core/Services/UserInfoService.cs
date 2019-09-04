@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.Net.Http.Headers;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public class UserInfoService : IUserInfoService
    {

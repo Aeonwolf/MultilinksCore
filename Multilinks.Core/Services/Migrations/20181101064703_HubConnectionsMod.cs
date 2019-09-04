@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     public partial class HubConnectionsMod : Migration
     {

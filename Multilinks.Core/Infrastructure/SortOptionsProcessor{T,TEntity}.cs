@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    public class SortOptionsProcessor<T, TEntity>
    {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    public static class HttpRequestExtensions
    {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     public partial class RedesignEntitiesRelationships : Migration
     {

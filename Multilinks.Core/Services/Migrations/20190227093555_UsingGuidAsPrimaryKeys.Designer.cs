@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Services;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     [DbContext(typeof(CoreDbContext))]
     [Migration("20190227093555_UsingGuidAsPrimaryKeys")]
@@ -21,7 +21,7 @@ namespace Multilinks.ApiService.Services.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointEntity", b =>
                 {
                     b.Property<Guid>("EndpointId")
                         .ValueGeneratedOnAdd();
@@ -43,7 +43,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Endpoints");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointLinkEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointLinkEntity", b =>
                 {
                     b.Property<Guid>("LinkId")
                         .ValueGeneratedOnAdd();
@@ -59,7 +59,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Links");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.HubConnectionEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.HubConnectionEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

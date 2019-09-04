@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
-using Multilinks.ApiService.Entities;
+using Multilinks.Core.Entities;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public class EndpointService : IEndpointService
    {

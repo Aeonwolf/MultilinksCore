@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Models;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    public class LinkRewriter
    {

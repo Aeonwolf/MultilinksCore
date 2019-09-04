@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Multilinks.ApiService.Entities
+namespace Multilinks.Core.Entities
 {
    public class HubConnectionEntity
    {

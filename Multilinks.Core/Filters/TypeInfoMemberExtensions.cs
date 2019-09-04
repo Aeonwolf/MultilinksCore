@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Multilinks.ApiService
+namespace Multilinks.Core
 {
     public static class TypeInfoMemberExtensions
     {

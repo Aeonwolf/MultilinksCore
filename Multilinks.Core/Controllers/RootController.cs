@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Multilinks.ApiService.Infrastructure;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Infrastructure;
+using Multilinks.Core.Models;
 
-namespace Multilinks.ApiService.Controllers
+namespace Multilinks.Core.Controllers
 {
    [Route("/")]
    [ApiVersion("1.0")]

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Services;
 using System;
 
-namespace Multilinks.ApiService
+namespace Multilinks.Core
 {
    public class SeedData
    {

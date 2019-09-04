@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
    public class SearchableAttribute : Attribute

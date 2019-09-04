@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace Multilinks.ApiService
+namespace Multilinks.Core
 {
    public class Program
    {

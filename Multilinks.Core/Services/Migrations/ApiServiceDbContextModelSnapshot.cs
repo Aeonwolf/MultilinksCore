@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Services;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     [DbContext(typeof(CoreDbContext))]
     partial class ApiServiceDbContextModelSnapshot : ModelSnapshot
@@ -19,7 +19,7 @@ namespace Multilinks.ApiService.Services.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointClientEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointClientEntity", b =>
                 {
                     b.Property<long>("EndpointClientId")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Clients");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointEntity", b =>
                 {
                     b.Property<Guid>("EndpointId")
                         .ValueGeneratedOnAdd();
@@ -67,7 +67,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Endpoints");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointLinkEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointLinkEntity", b =>
                 {
                     b.Property<Guid>("LinkId")
                         .ValueGeneratedOnAdd();
@@ -87,7 +87,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Links");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointOwnerEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointOwnerEntity", b =>
                 {
                     b.Property<long>("EndpointOwnerId")
                         .ValueGeneratedOnAdd()
@@ -104,7 +104,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Owners");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.HubConnectionEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.HubConnectionEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -120,7 +120,7 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("HubConnections");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.NotificationEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.NotificationEntity", b =>
                 {
                     b.Property<long>("NotificationId")
                         .ValueGeneratedOnAdd()
@@ -145,38 +145,38 @@ namespace Multilinks.ApiService.Services.Migrations
                     b.ToTable("Notifications");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointEntity", b =>
                 {
-                    b.HasOne("Multilinks.ApiService.Entities.EndpointClientEntity", "Client")
+                    b.HasOne("Multilinks.Core.Entities.EndpointClientEntity", "Client")
                         .WithMany("EndpointEntities")
                         .HasForeignKey("ClientEndpointClientId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Multilinks.ApiService.Entities.HubConnectionEntity", "HubConnection")
+                    b.HasOne("Multilinks.Core.Entities.HubConnectionEntity", "HubConnection")
                         .WithMany()
                         .HasForeignKey("HubConnectionId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Multilinks.ApiService.Entities.EndpointOwnerEntity", "Owner")
+                    b.HasOne("Multilinks.Core.Entities.EndpointOwnerEntity", "Owner")
                         .WithMany("EndpointEntities")
                         .HasForeignKey("OwnerEndpointOwnerId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointLinkEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointLinkEntity", b =>
                 {
-                    b.HasOne("Multilinks.ApiService.Entities.EndpointEntity", "AssociatedEndpoint")
+                    b.HasOne("Multilinks.Core.Entities.EndpointEntity", "AssociatedEndpoint")
                         .WithMany()
                         .HasForeignKey("AssociatedEndpointEndpointId");
 
-                    b.HasOne("Multilinks.ApiService.Entities.EndpointEntity", "SourceEndpoint")
+                    b.HasOne("Multilinks.Core.Entities.EndpointEntity", "SourceEndpoint")
                         .WithMany()
                         .HasForeignKey("SourceEndpointEndpointId");
                 });
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.NotificationEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.NotificationEntity", b =>
                 {
-                    b.HasOne("Multilinks.ApiService.Entities.EndpointEntity", "RecipientEndpoint")
+                    b.HasOne("Multilinks.Core.Entities.EndpointEntity", "RecipientEndpoint")
                         .WithMany("NotificationEntities")
                         .HasForeignKey("RecipientEndpointEndpointId")
                         .OnDelete(DeleteBehavior.Cascade);

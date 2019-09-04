@@ -1,4 +1,4 @@
-﻿namespace Multilinks.ApiService
+﻿namespace Multilinks.Core
 {
    public static class StringExtensions
    {

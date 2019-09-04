@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Linq;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class ApiError
    {

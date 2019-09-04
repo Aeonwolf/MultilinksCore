@@ -1,4 +1,4 @@
-﻿namespace Multilinks.ApiService.Infrastructure
+﻿namespace Multilinks.Core.Infrastructure
 {
    public class SearchTerm
    {

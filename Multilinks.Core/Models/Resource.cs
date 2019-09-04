@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public abstract class Resource : Link
    {

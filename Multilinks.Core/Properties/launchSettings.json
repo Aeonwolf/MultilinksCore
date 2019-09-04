@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Multilinks.ApiService": {
+    "Multilinks.Core": {
       "commandName": "Project",
       "launchUrl": "api/values",
       "environmentVariables": {

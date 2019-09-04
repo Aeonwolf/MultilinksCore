@@ -1,7 +1,7 @@
-﻿using Multilinks.ApiService.Infrastructure;
+﻿using Multilinks.Core.Infrastructure;
 using Newtonsoft.Json;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class NotificationsCollection : PagedCollection<NotificationViewModel>, IEtaggable
    {

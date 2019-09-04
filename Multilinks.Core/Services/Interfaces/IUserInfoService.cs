@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public interface IUserInfoService
    {

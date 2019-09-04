@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     public partial class UpdateEndpointEntity : Migration
     {

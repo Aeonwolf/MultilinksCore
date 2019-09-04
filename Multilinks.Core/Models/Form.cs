@@ -1,4 +1,4 @@
-﻿namespace Multilinks.ApiService.Models
+﻿namespace Multilinks.Core.Models
 {
    public class Form : Collection<FormField>
    {

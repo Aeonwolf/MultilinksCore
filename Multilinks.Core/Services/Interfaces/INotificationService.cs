@@ -1,11 +1,11 @@
 ﻿
-using Multilinks.ApiService.Entities;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Entities;
+using Multilinks.Core.Models;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public interface INotificationService
    {

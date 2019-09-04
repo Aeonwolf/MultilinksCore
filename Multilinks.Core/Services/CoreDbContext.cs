@@ -2,9 +2,9 @@
  */
 
 using Microsoft.EntityFrameworkCore;
-using Multilinks.ApiService.Entities;
+using Multilinks.Core.Entities;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public class CoreDbContext : DbContext
    {

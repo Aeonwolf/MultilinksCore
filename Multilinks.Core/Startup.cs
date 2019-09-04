@@ -4,21 +4,21 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Mvc.Formatters;
-using Multilinks.ApiService.Infrastructure;
+using Multilinks.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
-using Multilinks.ApiService.Filters;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Filters;
+using Multilinks.Core.Models;
 using Microsoft.EntityFrameworkCore;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
-using Multilinks.ApiService.Hubs;
-using Multilinks.ApiService.Infrastructure.Security;
+using Multilinks.Core.Hubs;
+using Multilinks.Core.Infrastructure.Security;
 using System;
 
-namespace Multilinks.ApiService
+namespace Multilinks.Core
 {
    public class Startup
    {

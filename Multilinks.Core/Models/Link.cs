@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.ComponentModel;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class Link
    {

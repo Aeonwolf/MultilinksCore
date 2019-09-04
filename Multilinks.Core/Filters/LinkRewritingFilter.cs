@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Multilinks.ApiService.Infrastructure;
+using Multilinks.Core.Infrastructure;
 using System;
 using System.Reflection;
 using System.Linq;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Models;
 using System.Collections.Generic;
 
-namespace Multilinks.ApiService.Filters
+namespace Multilinks.Core.Filters
 {
    public class LinkRewritingFilter : IAsyncResultFilter
    {

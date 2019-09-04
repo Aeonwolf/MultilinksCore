@@ -3,10 +3,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Multilinks.ApiService.Entities;
-using Multilinks.ApiService.Models;
+using Multilinks.Core.Entities;
+using Multilinks.Core.Models;
 
-namespace Multilinks.ApiService.Services
+namespace Multilinks.Core.Services
 {
    public class NotificationService : INotificationService
    {

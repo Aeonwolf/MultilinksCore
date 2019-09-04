@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Routing;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class PagedCollection<T> : Collection<T>
    {

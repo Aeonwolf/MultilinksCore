@@ -3,17 +3,17 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
-using Multilinks.ApiService.Entities;
-using Multilinks.ApiService.Infrastructure;
-using Multilinks.ApiService.Models;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Entities;
+using Multilinks.Core.Infrastructure;
+using Multilinks.Core.Models;
+using Multilinks.Core.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Multilinks.ApiService.Controllers
+namespace Multilinks.Core.Controllers
 {
    [Route("api/[controller]")]
    [ApiVersion("1.0")]

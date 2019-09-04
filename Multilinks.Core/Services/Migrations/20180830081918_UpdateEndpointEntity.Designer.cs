@@ -5,10 +5,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Services;
 using System;
 
-namespace Multilinks.ApiService.Services.Migrations
+namespace Multilinks.Core.Services.Migrations
 {
     [DbContext(typeof(CoreDbContext))]
     [Migration("20180830081918_UpdateEndpointEntity")]
@@ -21,7 +21,7 @@ namespace Multilinks.ApiService.Services.Migrations
                 .HasAnnotation("ProductVersion", "2.0.3-rtm-10026")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Multilinks.ApiService.Entities.EndpointEntity", b =>
+            modelBuilder.Entity("Multilinks.Core.Entities.EndpointEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();

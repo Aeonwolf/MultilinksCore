@@ -1,7 +1,7 @@
-﻿using Multilinks.ApiService.Entities;
+﻿using Multilinks.Core.Entities;
 using System.Threading.Tasks;
 
-namespace Multilinks.ApiService.Hubs.Interfaces
+namespace Multilinks.Core.Hubs.Interfaces
 {
    public interface IMainHub
    {

@@ -1,11 +1,11 @@
-﻿using Multilinks.ApiService.Models;
+﻿using Multilinks.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace Multilinks.ApiService.Infrastructure
+namespace Multilinks.Core.Infrastructure
 {
    public static class FormMetadata
    {

@@ -9,14 +9,14 @@ using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Options;
-using Multilinks.ApiService.Entities;
-using Multilinks.ApiService.Hubs;
-using Multilinks.ApiService.Hubs.Interfaces;
-using Multilinks.ApiService.Infrastructure;
-using Multilinks.ApiService.Models;
-using Multilinks.ApiService.Services;
+using Multilinks.Core.Entities;
+using Multilinks.Core.Hubs;
+using Multilinks.Core.Hubs.Interfaces;
+using Multilinks.Core.Infrastructure;
+using Multilinks.Core.Models;
+using Multilinks.Core.Services;
 
-namespace Multilinks.ApiService.Controllers
+namespace Multilinks.Core.Controllers
 {
    [Route("api/[controller]")]
    [ApiVersion("1.0")]

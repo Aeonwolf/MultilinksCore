@@ -1,8 +1,8 @@
-﻿using Multilinks.ApiService.Infrastructure;
+﻿using Multilinks.Core.Infrastructure;
 using Newtonsoft.Json;
 using System;
 
-namespace Multilinks.ApiService.Models
+namespace Multilinks.Core.Models
 {
    public class EndpointLinkViewModel : Resource, IEtaggable
    {
