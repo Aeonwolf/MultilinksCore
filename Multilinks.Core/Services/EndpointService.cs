@@ -10,9 +10,9 @@ namespace Multilinks.ApiService.Services
 {
    public class EndpointService : IEndpointService
    {
-      private readonly ApiServiceDbContext _context;
+      private readonly CoreDbContext _context;
 
-      public EndpointService(ApiServiceDbContext context)
+      public EndpointService(CoreDbContext context)
       {
          _context = context;
       }

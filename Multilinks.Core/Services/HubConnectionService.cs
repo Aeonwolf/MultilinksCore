@@ -10,9 +10,9 @@ namespace Multilinks.ApiService.Services
 {
    public class HubConnectionService : IHubConnectionService
    {
-      private readonly ApiServiceDbContext _context;
+      private readonly CoreDbContext _context;
 
-      public HubConnectionService(ApiServiceDbContext context)
+      public HubConnectionService(CoreDbContext context)
       {
          _context = context;
       }

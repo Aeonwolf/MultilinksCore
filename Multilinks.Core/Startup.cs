@@ -34,8 +34,8 @@ namespace Multilinks.ApiService
       // This method gets called by the runtime. Use this method to add services to the container.
       public void ConfigureServices(IServiceCollection services)
       {
-         services.AddDbContext<ApiServiceDbContext>(options =>
-             options.UseSqlServer(_configuration.GetConnectionString("ApiServiceDb")));
+         services.AddDbContext<CoreDbContext>(options =>
+             options.UseSqlServer(_configuration.GetConnectionString("CoreDb")));
 
          services.AddAutoMapper();
 

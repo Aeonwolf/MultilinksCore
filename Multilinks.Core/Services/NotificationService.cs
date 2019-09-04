@@ -10,9 +10,9 @@ namespace Multilinks.ApiService.Services
 {
    public class NotificationService : INotificationService
    {
-      private readonly ApiServiceDbContext _context;
+      private readonly CoreDbContext _context;
 
-      public NotificationService(ApiServiceDbContext context)
+      public NotificationService(CoreDbContext context)
       {
          _context = context;
       }

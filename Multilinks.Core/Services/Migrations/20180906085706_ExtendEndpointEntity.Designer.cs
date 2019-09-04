@@ -10,7 +10,7 @@ using System;
 
 namespace Multilinks.ApiService.Services.Migrations
 {
-    [DbContext(typeof(ApiServiceDbContext))]
+    [DbContext(typeof(CoreDbContext))]
     [Migration("20180906085706_ExtendEndpointEntity")]
     partial class ExtendEndpointEntity
     {

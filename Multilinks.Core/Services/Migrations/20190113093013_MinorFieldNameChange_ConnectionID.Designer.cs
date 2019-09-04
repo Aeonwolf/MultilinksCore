@@ -9,7 +9,7 @@ using Multilinks.ApiService.Services;
 
 namespace Multilinks.ApiService.Services.Migrations
 {
-    [DbContext(typeof(ApiServiceDbContext))]
+    [DbContext(typeof(CoreDbContext))]
     [Migration("20190113093013_MinorFieldNameChange_ConnectionID")]
     partial class MinorFieldNameChange_ConnectionID
     {

@@ -1,4 +1,4 @@
-﻿/* 1. Add-Migration -Name InitialApiDbMigration -Context ApiServiceDbContext -OutputDir Services/Migrations
+﻿/* 1. Add-Migration -Name InitialApiDbMigration -Context CoreDbContext -OutputDir Services/Migrations
  */
 
 using Microsoft.EntityFrameworkCore;
@@ -6,9 +6,9 @@ using Multilinks.ApiService.Entities;
 
 namespace Multilinks.ApiService.Services
 {
-   public class ApiServiceDbContext : DbContext
+   public class CoreDbContext : DbContext
    {
-      public ApiServiceDbContext(DbContextOptions<ApiServiceDbContext> options)
+      public CoreDbContext(DbContextOptions<CoreDbContext> options)
           : base(options)
       {
       }

@@ -13,7 +13,7 @@ namespace Multilinks.ApiService
 
          using(var scope = serviceProvider.GetRequiredService<IServiceScopeFactory>().CreateScope())
          {
-            var context = scope.ServiceProvider.GetService<ApiServiceDbContext>();
+            var context = scope.ServiceProvider.GetService<CoreDbContext>();
             context.Database.Migrate();
          }
 
