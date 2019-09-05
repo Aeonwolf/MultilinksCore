@@ -88,8 +88,8 @@ namespace Multilinks.Core
          })
          .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
          {
-            options.Authority = _configuration.GetValue<string>("TokenServiceInfo:AuthorityUrl");
-            options.ApiName = _configuration.GetValue<string>("TokenServiceInfo:ApiName");
+            options.Authority = _configuration.GetValue<string>("IdentityConfig:AuthorityUrl");
+            options.ApiName = _configuration.GetValue<string>("IdentityConfig:ApiName");
             options.TokenRetriever = CustomTokenRetriever.FromHeaderAndQueryString;
          });
 
@@ -111,8 +111,8 @@ namespace Multilinks.Core
          {
             options.AddPolicy("CorsMyOrigins", builder =>
             {
-               builder.WithOrigins(_configuration.GetValue<string>("CorsOrigins:WebApi"),
-                            _configuration.GetValue<string>("CorsOrigins:WebConsole"))
+               builder.WithOrigins(_configuration.GetValue<string>("Cors:Core"),
+                            _configuration.GetValue<string>("Cors:Portal"))
                .AllowAnyMethod()
                .AllowCredentials()
                .AllowAnyHeader();
