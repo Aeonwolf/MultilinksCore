@@ -110,6 +110,7 @@ Multilinks Core can be developed locally:
          - A dialog will ask for confirmation
          - Close Package Manager Console `SHFT + ESC`
 
+      + Ensure `Multilinks Identity` is up and running
       + Press `F5` to start `Multilinks Core` or `Ctrl + F5` without the debugger attached
 
    * Occasionally you will want to merge changes in the upstream repository (the original MultilinksCore repository) with your fork:
