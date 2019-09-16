@@ -1,6 +1,7 @@
 # Welcome to Multilinks Core
 
-Multilinks is a cloud-based platform aimed at making it easier for you (an application end-user/developer) to connect and communicate with other applications and Internet of things in real-time.
+Multilinks Core along with [Multilinks Portal](../MultilinksPortal/README.md) and [Multilinks Identity](../MultilinksIdentity/README.md) make up the "core" services of the Multilinks platform. You can learn more about Multilinks [here](ABOUT_MULTILINKS.md).
+
 
 ## Code of Conduct
 
@@ -19,14 +20,7 @@ This project and everyone participating in it is governed by the [Code of Conduc
 
 ## Contributing
 
-You can find information about contributing to Multilinks at our [Contribution page](CONTRIBUTING.md)
+You can find information about contributing to Multilinks at our [Contribution page](CONTRIBUTING.md).
 
-## The Big Picture
+## About Multilinks Core
 
-![Multilinks Big Picture](the_big_picture.gif "The big picture")
-
-## How Does Multilinks Works
-
-## Inside Multilinks Core
-
-## Who Would Find Multilinks Useful
