@@ -41,6 +41,21 @@ The Multilinks platform can be broken down into 4 concepts:
 
 #### Links
 
+   * A Link is data connection between two endpoints.
+   * Links are one-way data transfer connections (i.e. for a given link, one endpoint is always the sender and the other is always the recipient).
+   * For a given pair of endpoints there can be no more than two links between them.
+   * An endpoint can have no link associated with it.
+   * Each link is unique and function indendent of other links.
+   * A link can be deleted by the owner of either endpoints.
+
 #### Services
 
-## Who Would Find Multilinks Useful
+   * An endpoint's functionalities are presented as services which can be invoked by another endpoint via their established link.
+   * An endpoint's available services are defined by the device's hardware capabilities and the Multilinks client that it is running.
+   * Each service will consist of the following:
+      + `Service Name` - This is a user friendly label and is unique on the Multilinks platform.
+      + `Version` - Characteristics of a service can change over time, so a version number is used to distinguish the change.
+      + `Content Type` - Describe the payload data type (it is the responsibility of the sending endpoint to correctly serialise the payload so that the receiving endpoint can deserialise the payload correctly).
+      + `Payload` - The data associated with this service type.
+
+## Multilinks Applications In Real World Scenarios
