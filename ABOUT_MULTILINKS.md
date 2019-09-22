@@ -62,6 +62,8 @@ The Multilinks platform can be broken down into 4 concepts:
 
 #### Scenarios 1: Sophie, The Software Developer
 
+![Scenarios 1: Sophie, The Software Developer](doc_assets/scenario_1_sophie.gif "Scenarios 1: Sophie, The Software Developer")
+
 #### Scenarios 2: Daniel, The Software Developer
 
 #### Scenarios 3: Michael, The Tech Enthusiast
