@@ -1,4 +1,4 @@
-![Multilinks Core Header Image](core_doc_header.png "Core header image")
+![Multilinks Core Header Image](doc_assets/core_doc_header.png "Core header image")
 
 Multilinks Core along with [Multilinks Portal](https://github.com/ChrisDinhNZ/MultilinksPortal) and [Multilinks Identity](https://github.com/ChrisDinhNZ/MultilinksIdentity) makes up the "core" components of the Multilinks platform. You can learn more about Multilinks [here](ABOUT_MULTILINKS.md).
 

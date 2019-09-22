@@ -8,7 +8,7 @@ The goal of Multilinks is to be a community-driven, cloud-based platform aimed a
 
 ## The Big Picture
 
-![Multilinks Big Picture](the_big_picture.gif "The big picture")
+![Multilinks Big Picture](doc_assets/the_big_picture.gif "The big picture")
 
 ## How Does Multilinks Works
 
