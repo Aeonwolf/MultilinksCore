@@ -58,18 +58,18 @@ The Multilinks platform can be broken down into 4 concepts:
       + `Content Type` - Describe the payload data type (it is the responsibility of the sending endpoint to correctly serialise the payload so that the receiving endpoint can deserialise the payload correctly).
       + `Payload` - The data associated with this service type.
 
-## Multilinks Applications In Real World Scenarios
+## Multilinks Applications In Real World Scenario
 
-#### Scenarios 1: Sophie, The Software Developer
+#### Scenario 1: Sophie, The Software Developer
 
-![Scenarios 1: Sophie, The Software Developer](doc_assets/scenario_1_sophie.gif "Scenarios 1: Sophie, The Software Developer")
+![Scenario 1: Sophie, The Software Developer](doc_assets/scenario_1_sophie.gif "Scenario 1: Sophie, The Software Developer")
 
-#### Scenarios 2: Daniel, The Software Developer
+#### Scenario 2: Daniel, The Software Developer
 
-![Scenarios 2: Daniel, The Software Developer](doc_assets/scenario_2_daniel.gif "Scenarios 2: Daniel, The Software Developer")
+![Scenario 2: Daniel, The Software Developer](doc_assets/scenario_2_daniel.gif "Scenario 2: Daniel, The Software Developer")
 
-#### Scenarios 3: Michael, The Tech Enthusiast
+#### Scenario 3: Michael, The Tech Enthusiast
 
-![Scenarios 3: Michael, The Tech Enthusiast](doc_assets/scenario_3_michael.gif "Scenarios 3: Michael, The Tech Enthusiast")
+![Scenario 3: Michael, The Tech Enthusiast](doc_assets/scenario_3_michael.gif "Scenario 3: Michael, The Tech Enthusiast")
 
-#### Scenarios 4: Chris, The Non-Technical Guy
+#### Scenario 4: Chris, The Non-Technical Guy
