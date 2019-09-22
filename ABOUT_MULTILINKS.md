@@ -41,7 +41,7 @@ The Multilinks platform can be broken down into 4 concepts:
 
 #### Links
 
-   * A Link is data connection between two endpoints.
+   * A Link is a data connection between two endpoints.
    * Links are one-way data transfer connections (i.e. for a given link, one endpoint is always the sender and the other is always the recipient).
    * For a given pair of endpoints there can be no more than two links between them.
    * An endpoint can have no link associated with it.
@@ -59,3 +59,11 @@ The Multilinks platform can be broken down into 4 concepts:
       + `Payload` - The data associated with this service type.
 
 ## Multilinks Applications In Real World Scenarios
+
+#### Scenarios 1: Sophie, The Software Developer
+
+#### Scenarios 2: Daniel, The Software Developer
+
+#### Scenarios 3: Michael, The Tech Enthusiast
+
+#### Scenarios 4: Chris, The Non-Technical Guy
