@@ -73,3 +73,5 @@ The Multilinks platform can be broken down into 4 concepts:
 ![Scenario 3: Michael, The Tech Enthusiast](doc_assets/scenario_3_michael.gif "Scenario 3: Michael, The Tech Enthusiast")
 
 #### Scenario 4: Chris, The Non-Technical Guy
+
+![Scenario 4: Chris, The Non Technical Guy](doc_assets/scenario_4_chris.gif "Scenario 4: Chris, The Non Technical Guy")
