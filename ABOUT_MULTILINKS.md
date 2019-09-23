@@ -60,9 +60,25 @@ The Multilinks platform can be broken down into 4 concepts:
 
 ## Multilinks Applications In Real World Scenario
 
+Let's go through a couple of scenarios of users with different requirements and technical background and how they can use (or integrate with) Multilinks with their solution. These scenarios will also demonstrate how one application created by one developer can easily interact with another application created by another developer.
+
 #### Scenario 1: Sophie, The Software Developer
 
 ![Scenario 1: Sophie, The Software Developer](doc_assets/scenario_1_sophie.gif "Scenario 1: Sophie, The Software Developer")
+
+Sophie is interested in the state of a remote alarm `Code Orange` and she wants a SMS text sent to her mobile when `Code Orange` is activated or deactivated.
+Sophie is a software developer and she is keen to build the applications required to solve her problem but she doesn't want to build or manage the backend services required or deal with the securities concerned she has. So by integrating with Multilinks, her solution may look like something as follow:
+
+   * Create a simple Multilinks client `App A` running on a Raspberry Pi.
+   * `Code Orange` is linked to `App A` via a GPIO line.
+   * Create another simple Multilinks client `App B` running on a Raspberry Pi.
+   * `App B` will integrate with a SMS service provider allowing `App B` to send SMS to her mobile.
+   * In order for `App A` to send alarm activation/deactivation events to `App B`, `App A` needs to send a one-time link request to `App B`.
+   * The link request needs to be confirmed before communication via the link is allowed.
+   * Similarly, in order for `App B` to request `App A` to start/stop sending alarm activation/deactivation events, `App B` needs to send a one-time link request to `App A` (remember links are one-way).
+   * The link request also needs to be confirmed before communication via the link is allowed.
+   * Once the links are established and `App B` requested to be notified, on `Code Orange` activation/deactivation event a message is sent from `App A` to `App B`.
+   * On receipt of a message from `App A`, `App B` will trigger a SMS to be sent to Sophie's mobile.
 
 #### Scenario 2: Daniel, The Software Developer
 
