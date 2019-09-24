@@ -77,12 +77,23 @@ Sophie is a software developer and she is keen to build the applications require
    * The link request needs to be confirmed before communication via the link is allowed.
    * Similarly, in order for `App B` to request `App A` to start/stop sending alarm activation/deactivation events, `App B` needs to send a one-time link request to `App A` (remember links are one-way).
    * The link request also needs to be confirmed before communication via the link is allowed.
-   * Once the links are established and `App B` requested to be notified, on `Code Orange` activation/deactivation event a message is sent from `App A` to `App B`.
+   * Once the links are established and `App B` requested to be notified, on `Code Orange` activation/deactivation event, a message is sent from `App A` to `App B`.
    * On receipt of a message from `App A`, `App B` will trigger a SMS to be sent to Sophie's mobile.
 
 #### Scenario 2: Daniel, The Software Developer
 
 ![Scenario 2: Daniel, The Software Developer](doc_assets/scenario_2_daniel.gif "Scenario 2: Daniel, The Software Developer")
+
+Daniel is also interested in the state of `Code Orange` however does not want to be notified by a SMS text but instead have the notification sent to an app on his mobile.
+Daniel is a software developer and like Sophie is keen to build his own mobile app but doesn't want to invest the effort into the backend services just so that he can keep track of an alarm. So by integrating with Multilinks, his solution may look like something as follow:
+
+   * Create a simple Multilinks mobile client `App C` which he install onto his mobile.
+   * In order for `App C` on his mobile to receive notification of `Code Orange` activation/deactivation events he will need to indicate to `App A` that he is interested. Therefore he will need to send a link request from `App C` to `App A`.
+   * Since Sophie is the owner of the device `App A` is running on, she will need to authorised the link request.
+   * Similarly, a link from `App A` to `App C` is also rquired and this time Daniel will need to authorised the link request.
+   * Once the links are established and `App C` requested to be notified, on `Code Orange` activation/deactivation event, a message is sent from `App A` to both `App B` and `App C`.
+
+> By now some will probably be wondering why the links have to be one way. The design decision was that a one way link will implicitly indicate which is the sender and which is the recipient, where the data is coming from and where it is going to. Therefore less elements to deal with when many events are happening independent of each other.
 
 #### Scenario 3: Michael, The Tech Enthusiast
 
