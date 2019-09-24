@@ -126,3 +126,9 @@ Chris is interested in the state of both alarms `Code Orange` and `Code Red` and
    * Chris can now receive notifications of activation/deactivation events from both alarms.
 
 ## In Conclusion
+
+   * As mentioned at the start, Multilinks is basically a digital postal/parcel delivery system.
+   * It ensures only authorised devices/applications can communicate with each other.
+   * It allows devices/applications to communicate in real-time.
+   * Any clients can connect to it (console app, desktop, mobile, SPA, Web services, native app running on edge devices) as long as `Open Identity Connect`, `HTTP REST API` and `SignalR Core` is supported.
+   * In theory anything can be connected, as shown in [the big picture](ABOUT_MULTILINKS.md#welcome-to-multilinks) as long as the data can presented to the recipient.
