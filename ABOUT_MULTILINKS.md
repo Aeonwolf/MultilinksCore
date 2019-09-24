@@ -99,6 +99,16 @@ Daniel is a software developer and like Sophie is keen to build his own mobile a
 
 ![Scenario 3: Michael, The Tech Enthusiast](doc_assets/scenario_3_michael.gif "Scenario 3: Michael, The Tech Enthusiast")
 
+Michael is interested in the state of a remote alarm `Code Red` and similar to Daniel, does not want to be notified by a SMS text but instead have the notification sent to an app on his mobile.
+Michael doesn't have a lot of software experience (especially mobile app development and things) but he's into technology. He's a tinkerer and he knows his way around a Raspberry Pi and stuff. So with the help of Multilinks, his solution may look like something as follow:
+
+   * Given `App A` and `App C` are publicly available.
+   * Like Sophie, he installs `App A` on his own Raspberry Pi and connects to `Code Red` via a GPIO line.
+   * Installs `App C` on his mobile.
+   * Like the previous scenarios, Michael create a link from `App A` (running on his Raspberry Pi) to `App C` (running on his mobile) and vice versa.
+   * In this scenario, Michael only get notified of `Code Red` events and not `Code Orange` events.
+   * In this scenario, Sophie and Daniel only get notified of `Code Orange` events and not `Code Red` events.
+
 #### Scenario 4: Chris, The Non-Technical Guy
 
 ![Scenario 4: Chris, The Non Technical Guy](doc_assets/scenario_4_chris.gif "Scenario 4: Chris, The Non Technical Guy")
