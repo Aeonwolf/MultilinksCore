@@ -112,3 +112,17 @@ Michael doesn't have a lot of software experience (especially mobile app develop
 #### Scenario 4: Chris, The Non-Technical Guy
 
 ![Scenario 4: Chris, The Non Technical Guy](doc_assets/scenario_4_chris.gif "Scenario 4: Chris, The Non Technical Guy")
+
+Chris is interested in the state of both alarms `Code Orange` and `Code Red` and wants to have the notification sent to an app on his mobile. Lucky for Chris the process is pretty easy. With the help of Multilinks, his solution may look like something as follow:
+
+   * Given `App C` are publicly available.
+   * Installs `App C` on his mobile.
+   * He sends a link request from `App C` on his mobile to `App A` where `Code Orange` is connected to.
+   * Sophie can choose to decline but she trust Chris so approved the request.
+   * Similarly, Sophie needs to send a link request from `App A` running on her Raspberry Pi to `App C` running on his mobile.
+   * He sends a link request from `App C` on his mobile to `App A` where `Code Red` is connected to.
+   * Michael can choose to decline but he trust Chris so approved the request.
+   * Similarly, Michael needs to send a link request from `App A` running on his Raspberry Pi to `App C` running on Chris's mobile.
+   * Chris can now receive notifications of activation/deactivation events from both alarms.
+
+## In Conclusion
