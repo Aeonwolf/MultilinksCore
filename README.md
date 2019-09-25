@@ -1,6 +1,6 @@
 ![Multilinks Core Header Image](doc_assets/core_doc_header.png "Core header image")
 
-Multilinks Core along with [Multilinks Portal](https://github.com/ChrisDinhNZ/MultilinksPortal/blob/master/README.md) and [Multilinks Identity](https://github.com/ChrisDinhNZ/MultilinksIdentity/blob/master/README.md) makes up the "core" components of the Multilinks platform. You can learn more about Multilinks [here](ABOUT_MULTILINKS.md).
+[Multilinks Core](https://github.com/ChrisDinhNZ/MultilinksCore/blob/master/README.md) along with [Multilinks Portal](https://github.com/ChrisDinhNZ/MultilinksPortal/blob/master/README.md) and [Multilinks Identity](https://github.com/ChrisDinhNZ/MultilinksIdentity/blob/master/README.md) makes up the "core" components of the Multilinks platform. You can learn more about Multilinks [here](ABOUT_MULTILINKS.md).
 
 
 ## Code of Conduct
@@ -24,3 +24,4 @@ You can find information about contributing to Multilinks at our [Contribution p
 
 ## About Multilinks Core
 
+![About Multilinks Core](doc_assets/about_multilinks_core.png "About Multilinks Core")
