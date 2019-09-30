@@ -1,4 +1,4 @@
-# Contributing to Multilinks Core
+# Contributing to Multilinks Core (draft)
 
 :clap::tada: First off, thanks for taking the time to contribute! :tada::clap:
 
