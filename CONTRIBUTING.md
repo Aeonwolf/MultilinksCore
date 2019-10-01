@@ -1,4 +1,4 @@
-# Contributing to Multilinks Core (draft)
+# Contributing to Multilinks Core
 
 :clap::tada: First off, thanks for taking the time to contribute! :tada::clap:
 
@@ -37,15 +37,15 @@ Bugs are tracked as [GitHub issues](https://guides.github.com/features/issues/).
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
-* **Use a clear and descriptive title** for the issue to identify the problem.
-* **Describe the exact steps which reproduce the problem** in as many details as possible.
-* **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
-* **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
-* **Explain which behavior you expected to see instead and why.**
+* 1. **Use a clear and descriptive title** for the issue to identify the problem.
+* 2. **Describe the exact steps which reproduce the problem** in as many details as possible.
+* 3. **Provide specific examples to demonstrate the steps**. Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
+* 4. **Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior.
+* 5. **Explain which behavior you expected to see instead and why.**
 
 Provide more context by answering these questions:
 
-* **Did the problem start happening recently**
+* **Did the problem start happening recently?**
 * If the problem started happening recently, what's the most recent version in which the problem doesn't happen?
 * **Can you reliably reproduce the issue?** If not, provide details about how often the problem happens and under which conditions it normally happens.
 
@@ -59,11 +59,11 @@ Before creating enhancement suggestions, please check the list of existing issue
 
 Enhancement suggestions are tracked as [GitHub issues](https://guides.github.com/features/issues/). After you've determined which repository your enhancement suggestion is related to, create an issue on that repository and provide the following information:
 
-* **Use a clear and descriptive title** for the issue to identify the suggestion.
-* **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
-* **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
-* **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Explain why this enhancement would be useful**
+* 1. **Use a clear and descriptive title** for the issue to identify the suggestion.
+* 2. **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
+* 3. **Provide specific examples to demonstrate the steps**. Include copy/pasteable snippets which you use in those examples, as [Markdown code blocks](https://help.github.com/articles/markdown-basics/#multiple-lines).
+* 4. **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
+* 5. **Explain why this enhancement would be useful**
 
 ### Your First Code Contribution
 
